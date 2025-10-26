@@ -1,0 +1,13 @@
+#include <iostream>
+
+// Function declaration with default arguments
+void greet(std::string name = "Guest", std::string message = "Hello") {
+    std::cout << message << ", " << name << "!" << std::endl;
+}
+
+int main() {
+    greet("Alice", "Hi"); // Overrides both default values
+    greet("Bob");         // Uses default message, overrides name
+    greet();              // Uses both default values
+    return 0;
+}
